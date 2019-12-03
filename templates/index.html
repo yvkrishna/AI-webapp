@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MY Lab</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Web Page</title>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/dacf88b734.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		html,body{
+			padding:0px;
+			width: 100%;
+			height: 100%; 
+		}
+		.top{
+			width:100%;
+			height: 270px;
+			background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
+			position: relative;
+			z-index: -20;
+			border:none;
+		}
+		.navbar{
+			position: absolute;
+			z-index: 10;
+    		top: 32%;
+    		width: 56%;
+    		box-shadow: 0 20px 14px 0 rgba(0,0,0,0.2);
+    		left: 21%;
+		}
+		.navbar-brand,.nav-link{
+			font-size: 25px;
+			letter-spacing: 2px;2
+		}
+		.aisvg{
+			width: 20%;
+		    position: absolute;
+		    z-index: 10;
+		    top: 15%;
+		    left: 0;
+		}
+		.labwork{
+			    width: 20%;
+			    position: absolute;
+			    z-index: 10;
+			    top: 23%;
+			    left: 79%;
+		}
+		.fas{
+			position: absolute;
+		    top: 46%;
+		    left: 46%;
+		}
+		.card{
+			width: 16rem;
+    		height: 230px;
+    		box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2); 
+    		position: absolute;
+    		top: 90%;
+		}
+		.txt{
+			position: absolute;
+		    top: 74%;
+		    left: 33%;
+		}
+		.addsvg{
+			width: 166%;
+		    position: absolute;
+		    left: -73%;
+		}
+		#forms{
+			position: relative;
+			display: none;
+		}
+		#part-2,#part-3{
+			display: none;
+		}
+		.card-title{
+			   text-align: center;
+		}
+		.xyz{
+			left: -27%;
+		}
+		#urproj{
+			margin-top: 7%;
+			margin-left: 5px;
+		}
+		@media (max-width: 768px){
+			.navbar{
+				width:90%;
+				top: 20%;
+				left: 6%;
+			}
+			.top{
+				height: 200px;
+				width: 104%;
+			}
+			.aisvg , .labwork{
+				display: none;
+			}
+			.projects{
+				margin-left: 25px;
+			}
+			.addpro{
+				height: 54px;
+			}
+			.card1{
+				left: -70%;
+    			top: 152%;
+			}
+			.txt{
+			    top: 46%;
+			    left: 45%;
+			    font-size: 18px;
+			}
+			.fas{
+			    top: 29%;
+			    left: 31%;
+			}
+			.addsvg{
+				display: none;
+			}
+			.xyz {
+				left: -72%;
+			}
+			.addpro{
+				left: 28%;
+			}
+			#urproj{
+				margin-top: 13%;
+   				margin-left: 63px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header id="body_head">
+		<button class="top">
+			<img class="aisvg" src="AI.svg">
+			<img class="labwork" src="Lab-Work.svg">
+		</button>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <a class="navbar-brand" href="#">My Workspace</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav ml-lg-auto">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/edit-info">My Account</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#resume">My Resume</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#lab">Lab</a>
+			      </li>
+			    </ul>
+			  </div>
+			</div>
+			</nav>
+		</div>
+		</header>
+		<br>
+		<br>
+		<br>
+		<main id="body_main">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card" style="width: 18rem;">
+						  <img class="card-img-top" src="..." alt="Card image cap">
+						  <div class="card-body">
+						    <h5 class="card-title">Computer Vision</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Get Started</a>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card" style="width: 18rem;">
+						  <img class="card-img-top" src="..." alt="Card image cap">
+						  <div class="card-body">
+						    <h5 class="card-title">Object Detection</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Get Started</a>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card" style="width: 18rem;">
+						  <img class="card-img-top" src="..." alt="Card image cap">
+						  <div class="card-body">
+						    <h5 class="card-title">Facial Recognition</h5>
+						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						    <a href="#" class="btn btn-primary">Get Started</a>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
