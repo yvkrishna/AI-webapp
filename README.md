@@ -8,11 +8,6 @@ to be used in the web .
 
 [![Gitter](https://badges.gitter.im/yvkrishna/MyMlToolKit.svg)](https://gitter.im/yvkrishna/MyMlToolKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-For this I have added a html page which contains all the frontend part 
-and the logic for the backend should be decided .
-
-The backend consists of various trained models which are then deployed and used  in practice 
-
 ---
 
 This is a ml tool box which contains pre-trained models on computer vision,object detection,facial recognition
@@ -33,4 +28,8 @@ We could able to achieve Facial Recognition and Object Detection with ease if we
 --- 
 
 The folder `Templates `contains all the front end related documents...
+For this I have added `index.html` page which contains all the frontend part 
+and the logic for the backend should be decided .
+Also The backend consists of various trained models which are then deployed and used  in practice 
+
 ---Happy coding---
