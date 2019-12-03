@@ -10,7 +10,6 @@ to be used in the web .
 
 ---
 
-This is a ml tool box which contains pre-trained models on computer vision,object detection,facial recognition
 This project aims to generate an api which takes the feed of the user data and based on the options selected by the user api returns the needed information.
 
 `Computer vision` : computer vision can be used in various types of fields From any software project to any hardware project. Comming to this project. The main objectives in this project are :
