@@ -75,3 +75,106 @@ def resize():
         else:
           cnt+=1
     print(cnt)
+resize()
+print(path+dirs[0]+new_dirs[0])
+
+def resize():
+    cnt=0;
+    for i in range(len(val_dirs)):
+      for j in range(len(val_new_dirs)):
+        if os.path.isfile(val_path+val_dirs[i]+"/"+val_new_dirs[j]):
+            im = Image.open(val_path+val_dirs[i]+"/"+val_new_dirs[j])
+            f, e = os.path.splitext(val_path+val_dirs[i]+"/"+val_new_dirs[j])
+            imResize = im.resize((200,200), Image.ANTIALIAS)
+            imResize.save(f+".jpg", 'JPEG', quality=90)
+            print(val_path+val_dirs[i]+"/"+val_new_dirs[j])
+    print(val_path+val_dirs[0]+"/"+val_new_dirs[0])
+    
+resize()
+
+im = Image.open('/content/drive/My Drive/family photos/train/Srivalli/IMG_20191006_225118')
+width, height = im.size
+print(width,height)
+
+batch_size = 20
+IMG_SHAPE = 200 
+
+
+image_gen_train = ImageDataGenerator(
+                    rescale=1./255,
+                    rotation_range=45,
+                    width_shift_range=.15,
+                    height_shift_range=.15,
+                    horizontal_flip=True,
+                    zoom_range=0.5
+                    )
+
+
+train_data_gen = image_gen_train.flow_from_directory(
+                                                batch_size=batch_size,
+                                                directory=train_dir,
+                                                shuffle=True,
+                                                target_size=(IMG_SHAPE,IMG_SHAPE),
+                                                class_mode='sparse'
+                                                )
+                                                
+image_gen_val = ImageDataGenerator(rescale=1./255)
+
+val_data_gen = image_gen_val.flow_from_directory(batch_size=batch_size,
+                                                 directory=val_dir,
+                                                 target_size=(IMG_SHAPE, IMG_SHAPE),
+                                                 class_mode='sparse')
+                                                 
+model = Sequential()
+
+model.add(Conv2D(16, 3, padding='same', activation='relu', input_shape=(IMG_SHAPE,IMG_SHAPE, 3)))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(32, 3, padding='same', activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(64, 3, padding='same', activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Flatten())
+model.add(Dropout(0.2))
+model.add(Dense(512, activation='relu'))
+
+model.add(Dropout(0.2))
+model.add(Dense(5, activation='softmax'))
+
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+epochs = 80
+
+history = model.fit_generator(
+    train_data_gen,
+    steps_per_epoch=int(np.ceil(train_data_gen.n / float(batch_size))),
+    epochs=epochs,
+    validation_data=val_data_gen,
+    validation_steps=int(np.ceil(val_data_gen.n / float(batch_size)))
+)
+
+acc = history.history['accuracy']
+val_acc = history.history['val_accuracy']
+
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+epochs_range = range(epochs)
+
+plt.figure(figsize=(8, 8))
+plt.subplot(1, 2, 1)
+plt.plot(epochs_range, acc, label='Training Accuracy')
+plt.plot(epochs_range, val_acc, label='Validation Accuracy')
+plt.legend(loc='lower right')
+plt.title('Training and Validation Accuracy')
+
+plt.subplot(1, 2, 2)
+plt.plot(epochs_range, loss, label='Training Loss')
+plt.plot(epochs_range, val_loss, label='Validation Loss')
+plt.legend(loc='upper right')
+plt.title('Training and Validation Loss')
+plt.show()
