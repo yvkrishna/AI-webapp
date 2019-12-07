@@ -26,9 +26,13 @@ We could able to achieve Facial Recognition and Object Detection with ease if we
 
 --- 
 
+
 The folder `Templates `contains all the front end related documents...
 For this I have added `index.html` page which contains all the frontend part 
 and the logic for the backend should be decided .
 Also The backend consists of various trained models which are then deployed and used  in practice 
 
 ---Happy coding---
+
+If you would like to contribute to this project then try to solve the issues
+If you are new to open source conteibutions then try to solve good first issues labels
