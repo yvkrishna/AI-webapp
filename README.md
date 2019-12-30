@@ -6,8 +6,6 @@ This repo is about making AI features like
 `Image Classification` 
 to be used in the web .
 
-[![Gitter](https://badges.gitter.im/yvkrishna/MyMlToolKit.svg)](https://gitter.im/yvkrishna/MyMlToolKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 ---
 
 This project aims to generate an api which takes the feed of the user data and based on the options selected by the user api returns the needed information.
