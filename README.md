@@ -28,11 +28,7 @@ This part 1 aims to generate an api which takes the feed of the user requirement
 
 `Part - 2`
 
-This part is more on the usage of common people. A webapp which contains many models which are aldready deployed , the user can use the  functionalities of the trained model by calling them usiing a proper GUI.
-
-` Example - 1 `
-
-Suppose text detection was selected by the user , then when he opens his camera then the model should be able to identify the text embedded in it and display it to the user. Like if the user is in a new place and could not understand the text written on the city then he could use this model to understand the text embedded in the photo.   
+This part is more on the usage of common people. A webapp which contains many models which are aldready deployed , the user can use the  functionalities of the trained model by calling them usiing a proper GUI. 
     
 --- 
 
